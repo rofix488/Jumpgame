@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>점프 게임</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hud">
+  <div class="hud-item">높이: <span id="height">0</span> m</div>
+  <div class="hud-item">에너지: <span id="energy-text">100</span>
+    <div class="bar"><div id="energy-bar" class="bar-fill"></div></div>
+  </div>
+  <div class="hud-item">남은 시간: <span id="timer">03:00</span></div>
+</div>
+<canvas id="game" width="400" height="600"></canvas>
+
+<div id="quiz" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-title">학교 퀴즈</div>
+    <div id="quiz-question" class="modal-text"></div>
+    <div id="quiz-options" class="options"></div>
+    <button id="quiz-close" class="btn secondary">나중에</button>
+  </div>
+  <div class="modal-backdrop"></div>
+  </div>
+
+<div id="leaderboard" class="modal hidden">
+  <div class="modal-content wide">
+    <div class="modal-title">랭킹</div>
+    <div class="modal-text">높이 순으로 정렬</div>
+    <table class="table" id="board-table"></table>
+    <button id="restart" class="btn primary">처음부터 시작하기</button>
+  </div>
+  <div class="modal-backdrop"></div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
